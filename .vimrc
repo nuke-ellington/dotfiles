@@ -49,7 +49,7 @@ noremap <Leader>w :w<CR>
 noremap <Leader>wq :wq<CR>
 
 " Fast access to vimrc
-nnoremap <Leader>ve :e$MYVIMRC<CR>
+nnoremap <Leader>ve :split $MYVIMRC<CR>
 nnoremap <Leader>vs :source $MYVIMRC<CR>
 
 " If lines wrap j and k can navigate on one line
