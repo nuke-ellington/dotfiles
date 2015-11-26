@@ -44,9 +44,8 @@ let mapleader = "\<Space>"
 " Shortcuts for ex cmds
 noremap <Leader>e :e#<CR>
 noremap <Leader>q :q<CR>
-noremap <Leader>Q :q!<CR>
+noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
-noremap <Leader>wq :wq<CR>
 
 " Fast access to vimrc
 nnoremap <Leader>ve :split $MYVIMRC<CR>
