@@ -43,6 +43,7 @@ endif
 let mapleader = "\<Space>"
 " Shortcuts for ex cmds
 noremap <Leader>e :e#<CR>
+noremap <Leader>n :n<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
