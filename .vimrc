@@ -62,8 +62,9 @@ nnoremap ö :nohlsearch<CR>
 " Fold code block surrounded by curly braces that starts or ends on current line
 nnoremap <silent> zff :exe 'normal 0f{' <Bar> exe 'normal f}' <Bar> exe 'normal! zf%'<CR>
 
-" Prevent unnecessary hand movement
+" Prevent unnecessary hand movement to reach ESC
 inoremap jk <Esc>
+cnoremap jk <C-c>
 
 " Enable syntax highlighting
 syntax enable
