@@ -1,5 +1,20 @@
 set nocompatible
 
+" Vundle packet manager
+filetype off    " required by Vundle
+
+let win_shell = (has('win32') || has('win64')) && &shellcmdflag =~ '/'
+let vimDir = win_shell ? '$USERPROFILE/vimfiles' : '$HOME/.vim'
+let &runtimepath .= ',' . expand(vimDir . '/bundle/Vundle.vim')
+call vundle#rc(expand(vimDir . '/bundle'))
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+
 " Allow local .vimrc files
 set exrc
 
