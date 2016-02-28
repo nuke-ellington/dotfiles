@@ -1,7 +1,7 @@
 set nocompatible
 
 " Vundle packet manager
-filetype off    " required by Vundle
+filetype off
 
 let win_shell = (has('win32') || has('win64')) && &shellcmdflag =~ '/'
 let vimDir = win_shell ? '$USERPROFILE/vimfiles' : '$HOME/.vim'
@@ -10,6 +10,16 @@ call vundle#rc(expand(vimDir . '/bundle'))
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+" Fuzzy file, buffer, etc. finder (Invoke with <C-p>).
+Plugin 'ctrlpvim/ctrlp.vim'
+" Enable the '.' command for plugin maps.
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+" Required for SnipMate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on
