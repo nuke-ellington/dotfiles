@@ -92,6 +92,10 @@ noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
 
+" Window movement
+nnoremap <Leader>j :wincmd w<CR>
+nnoremap <Leader>k :wincmd W<CR>
+
 " Fast access to vimrc
 nnoremap <Leader>ve :split $MYVIMRC<CR>
 nnoremap <Leader>vs :source $MYVIMRC<CR>
