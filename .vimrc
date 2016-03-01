@@ -10,16 +10,35 @@ call vundle#rc(expand(vimDir . '/bundle'))
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
 " Fuzzy file, buffer, etc. finder (Invoke with <C-p>).
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim' "{{{
+    nnoremap <Leader>p :CtrlP<CR>
+"}}}
+
 " Enable the '.' command for plugin maps.
 Plugin 'tpope/vim-repeat'
+
 Plugin 'tpope/vim-surround'
 " Required for SnipMate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'bling/vim-bufferline'
+
+" Toggle marks using mx where x is the mark
+Plugin 'kshenoy/vim-signature'
+
+" <Leader>ig to toggle indent guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'mhinz/vim-startify'
+
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'vim-scripts/LustyExplorer'
 
 call vundle#end()
 filetype plugin indent on
