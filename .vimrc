@@ -59,7 +59,7 @@ set relativenumber
 
 set linebreak
 set nowrap
-set foldcolumn=3
+set foldcolumn=2
 set hlsearch
 set showmatch
 set mousehide
@@ -79,7 +79,7 @@ set wildignore=*.o,*~,.git\*,.hg\*,.svn\*
 
 " Use mouse on terminals too
 if has('mouse')
-	set mouse=a
+    set mouse=a
 endif
 
 " Define the spacebar as <Leader> modifier key used in key mappings.
@@ -105,14 +105,18 @@ nnoremap j gj
 nnoremap k gk
 
 " Remove current search highlights
-nnoremap ö :nohlsearch<CR>
+nnoremap <silent> ö :nohlsearch<CR>
 
-" Fold code block surrounded by curly braces that starts or ends on current line
+" Fold code block surrounded by curly braces that starts or ends on current
+" line. Also this closes Vim marker folds in manual mode.
 nnoremap <silent> zff :exe 'normal 0f{' <Bar> exe 'normal f}' <Bar> exe 'normal! zf%'<CR>
 
 " Prevent unnecessary hand movement to reach ESC
+" aka Smash Escape
 inoremap jk <Esc>
+inoremap kj <Esc>
 cnoremap jk <C-c>
+cnoremap kj <C-c>
 
 " Enable syntax highlighting
 syntax enable
