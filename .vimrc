@@ -1,5 +1,9 @@
 set nocompatible
 
+" Define the spacebar as <Leader> modifier key used in key mappings.
+" map <Leader>xy vim-cmd
+let mapleader = "\<Space>"
+
 " Vundle packet manager
 filetype off
 
@@ -20,6 +24,11 @@ Plugin 'ctrlpvim/ctrlp.vim' "{{{
 Plugin 'tpope/vim-repeat'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'scrooloose/nerdtree' "{{{
+    nnoremap <Leader>nt :NERDTree<CR>
+"}}}
+
 " Required for SnipMate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -35,7 +44,13 @@ Plugin 'kshenoy/vim-signature'
 " <Leader>ig to toggle indent guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
-Plugin 'mhinz/vim-startify'
+Plugin 'mhinz/vim-startify' "{{{
+    let g:startify_custom_header = []
+"}}}
+
+Plugin 'othree/javascript-libraries-syntax.vim' "{{{
+    let g:used_javascript_libs = 'angularjs,jquery'
+"}}}
 
 "Plugin 'altercation/vim-colors-solarized'
 "Plugin 'vim-scripts/LustyExplorer'
@@ -82,9 +97,6 @@ if has('mouse')
     set mouse=a
 endif
 
-" Define the spacebar as <Leader> modifier key used in key mappings.
-" map <Leader>xy vim-cmd
-let mapleader = "\<Space>"
 " Shortcuts for ex cmds
 noremap <Leader>e :e#<CR>
 noremap <Leader>n :n<CR>
