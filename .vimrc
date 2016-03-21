@@ -99,7 +99,7 @@ endif
 
 " Shortcuts for ex cmds
 noremap <Leader>e :e#<CR>
-noremap <Leader>n :n<CR>
+noremap <Leader>> :n<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
@@ -109,12 +109,16 @@ nnoremap <Leader>j :wincmd w<CR>
 nnoremap <Leader>k :wincmd W<CR>
 
 " Fast access to vimrc
-nnoremap <Leader>ve :split $MYVIMRC<CR>
+nnoremap <Leader>ve :edit $MYVIMRC<CR>
+nnoremap <Leader>vh :split $MYVIMRC<CR>
+nnoremap <Leader>vv :vsplit $MYVIMRC<CR>
 nnoremap <Leader>vs :source $MYVIMRC<CR>
 
 " If lines wrap j and k can navigate on one line
 nnoremap j gj
 nnoremap k gk
+
+nnoremap Y y$
 
 " Remove current search highlights
 nnoremap <silent> ö :nohlsearch<CR>
