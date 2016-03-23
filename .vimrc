@@ -26,6 +26,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
 Plugin 'scrooloose/nerdtree' "{{{
+    let g:NERDTreeMapOpenSplit = 's'
+    let g:NERDTreeMapOpenVSplit = 'v'
     nnoremap <Leader>nt :NERDTree<CR>
 "}}}
 
