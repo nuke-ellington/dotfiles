@@ -60,6 +60,8 @@ Plugin 'othree/javascript-libraries-syntax.vim' "{{{
 call vundle#end()
 filetype plugin indent on
 
+set encoding=utf-8
+
 set noexpandtab
 set softtabstop=4
 set shiftwidth=4
