@@ -60,6 +60,9 @@ Plugin 'othree/javascript-libraries-syntax.vim' "{{{
 call vundle#end()
 filetype plugin indent on
 
+set noexpandtab
+set softtabstop=4
+set shiftwidth=4
 
 " Allow local .vimrc files
 set exrc
@@ -82,13 +85,9 @@ set showmatch
 set mousehide
 " Preview next two lines when scrolling vertically
 set scrolloff=2
-set expandtab
 set smarttab
 set autoindent
 set smartindent
-
-set ruler
-set tabstop=4
 
 set showcmd
 set wildmenu
