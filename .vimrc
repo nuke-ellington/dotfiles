@@ -101,7 +101,8 @@ endif
 
 " Shortcuts for ex cmds
 noremap <Leader>e :e#<CR>
-noremap <Leader>> :n<CR>
+noremap <Leader>> :next<CR>
+noremap <Leader>< :previous<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
@@ -133,6 +134,8 @@ nnoremap <silent> zff :exe 'normal 0f{' <Bar> exe 'normal f}' <Bar> exe 'normal!
 " aka Smash Escape
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap JK <Esc>
+inoremap KJ <Esc>
 cnoremap jk <C-c>
 cnoremap kj <C-c>
 
