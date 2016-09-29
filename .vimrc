@@ -134,11 +134,9 @@ nnoremap <silent> zff :exe 'normal 0f{' <Bar> exe 'normal f}' <Bar> exe 'normal!
 " Prevent unnecessary hand movement to reach ESC
 " aka Smash Escape
 inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap JK <Esc>
-inoremap KJ <Esc>
+inoremap kj <Esc>/
 cnoremap jk <C-c>
-cnoremap kj <C-c>
+cnoremap kj <C-c>/
 
 " Enable syntax highlighting
 syntax enable
