@@ -4,6 +4,8 @@ set nocompatible
 " map <Leader>xy vim-cmd
 let mapleader = "\<Space>"
 
+au BufRead,BufNewFile *.xaml set filetype=xml
+
 " Vundle packet manager
 filetype off
 
