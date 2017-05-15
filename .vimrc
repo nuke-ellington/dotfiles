@@ -33,6 +33,10 @@ Plugin 'scrooloose/nerdtree' "{{{
     nnoremap <Leader>nt :NERDTree<CR>
 "}}}
 
+" Git related plugins
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 " Required for SnipMate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
