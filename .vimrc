@@ -5,6 +5,7 @@ set nocompatible
 let mapleader = "\<Space>"
 
 au BufRead,BufNewFile *.xaml set filetype=xml
+au BufRead,BufNewFile *.ts set filetype=typescript
 
 " Vundle packet manager
 filetype off
@@ -41,7 +42,17 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plugin 'honza/vim-snippets' "{{{
+    let g:snips_author = $USER
+    let g:snipMate = get(g:, 'snipMate', {})
+    let g:snipMate.scope_aliases = get(g:snipMate, 'scope_aliases', {})
+    " Load XML snippets when editing snippets
+    let g:snipMate.scope_aliases['snippets']
+            \= 'snippets,xml'
+    " TypeScript is a superset of JavaScript
+    let g:snipMate.scope_aliases['typescript']
+            \= 'typescript,javascript'
+"}}}
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -59,6 +70,8 @@ Plugin 'mhinz/vim-startify' "{{{
 Plugin 'othree/javascript-libraries-syntax.vim' "{{{
     let g:used_javascript_libs = 'angularjs,jquery'
 "}}}
+
+Plugin 'leafgarland/typescript-vim'
 
 "Plugin 'altercation/vim-colors-solarized'
 "Plugin 'vim-scripts/LustyExplorer'
