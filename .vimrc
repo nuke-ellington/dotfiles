@@ -80,7 +80,8 @@ Plugin 'altercation/vim-colors-solarized' "{{{
     endif
 "}}}
 
-"Plugin 'vim-scripts/LustyExplorer'
+" LustyExplorer <Leader> l[frgb] & LustyJuggler <Leader>lj
+Plugin 'sjbach/lusty'
 
 call vundle#end()
 filetype plugin indent on
