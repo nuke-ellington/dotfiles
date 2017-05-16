@@ -105,6 +105,10 @@ set incsearch
 set number
 set relativenumber
 
+" Highlight tabs and trailing whitespace
+set listchars=tab:>.,trail:.
+set list
+
 set linebreak
 set nowrap
 set foldcolumn=2
