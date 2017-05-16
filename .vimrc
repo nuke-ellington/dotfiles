@@ -114,6 +114,8 @@ set showcmd
 set wildmenu
 set wildignore=*.o,*~,.git\*,.hg\*,.svn\*
 
+set hidden
+
 " Use mouse on terminals too
 if has('mouse')
     set mouse=a
