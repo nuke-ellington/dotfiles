@@ -73,7 +73,13 @@ Plugin 'othree/javascript-libraries-syntax.vim' "{{{
 
 Plugin 'leafgarland/typescript-vim'
 
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized' "{{{
+    if has("gui_running")
+        colorscheme solarized
+        set background=dark
+    endif
+"}}}
+
 "Plugin 'vim-scripts/LustyExplorer'
 
 call vundle#end()
@@ -161,6 +167,3 @@ cnoremap kj <C-c>/
 
 " Enable syntax highlighting
 syntax enable
-
-colorscheme slate
-
