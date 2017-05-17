@@ -83,6 +83,8 @@ Plugin 'altercation/vim-colors-solarized' "{{{
 " LustyExplorer <Leader> l[frgb] & LustyJuggler <Leader>lj
 Plugin 'sjbach/lusty'
 
+Plugin 'vim-scripts/matchit.zip'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -161,6 +163,8 @@ nnoremap <silent> ö :nohlsearch<CR>
 
 " Fold code block surrounded by curly braces that starts or ends on current
 " line. Also this closes Vim marker folds in manual mode.
+" TODO This map could be deprecated since the matchit plugin allows zf% to
+" achive the same.
 nnoremap <silent> zff :exe 'normal 0f{' <Bar> exe 'normal f}' <Bar> exe 'normal! zf%'<CR>
 
 " Prevent unnecessary hand movement to reach ESC
