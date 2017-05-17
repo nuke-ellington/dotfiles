@@ -129,6 +129,8 @@ set wildignore=*.o,*~,.git\*,.hg\*,.svn\*
 
 set hidden
 
+set clipboard=unnamed
+
 " Use mouse on terminals too
 if has('mouse')
     set mouse=a
