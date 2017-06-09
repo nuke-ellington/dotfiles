@@ -45,13 +45,10 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets' "{{{
     let g:snips_author = $USER
     let g:snipMate = get(g:, 'snipMate', {})
+    let g:snipMate.snippet_version = 1
     let g:snipMate.scope_aliases = get(g:snipMate, 'scope_aliases', {})
     " Load XML snippets when editing snippets
-    let g:snipMate.scope_aliases['snippets']
-            \= 'snippets,xml'
-    " TypeScript is a superset of JavaScript
-    let g:snipMate.scope_aliases['typescript']
-            \= 'typescript,javascript'
+    let g:snipMate.scope_aliases['snippets'] = 'snippets,xml'
 "}}}
 
 Plugin 'vim-airline/vim-airline'
