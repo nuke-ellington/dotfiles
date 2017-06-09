@@ -70,12 +70,7 @@ Plugin 'othree/javascript-libraries-syntax.vim' "{{{
 
 Plugin 'leafgarland/typescript-vim'
 
-Plugin 'altercation/vim-colors-solarized' "{{{
-    if has("gui_running")
-        colorscheme solarized
-        set background=dark
-    endif
-"}}}
+Plugin 'altercation/vim-colors-solarized'
 
 " LustyExplorer <Leader> l[frgb] & LustyJuggler <Leader>lj
 Plugin 'sjbach/lusty'
@@ -107,6 +102,11 @@ set relativenumber
 " Highlight tabs and trailing whitespace
 set listchars=tab:>.,trail:.
 set list
+
+if has("gui_running")
+    colorscheme solarized
+    set background=dark
+endif
 
 set linebreak
 set nowrap
