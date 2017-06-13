@@ -18,11 +18,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Fuzzy file, buffer, etc. finder (Invoke with <C-p>).
-Plugin 'ctrlpvim/ctrlp.vim' "{{{
-    nnoremap <Leader>p :CtrlP<CR>
-"}}}
-
 " Enable the '.' command for plugin maps.
 Plugin 'tpope/vim-repeat'
 
