@@ -4,9 +4,6 @@ set nocompatible
 " map <Leader>xy vim-cmd
 let mapleader = "\<Space>"
 
-au BufRead,BufNewFile *.xaml set filetype=xml
-au BufRead,BufNewFile *.ts set filetype=typescript
-
 " Vundle packet manager
 filetype off
 
@@ -26,6 +23,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree' "{{{
     let g:NERDTreeMapOpenSplit = 's'
     let g:NERDTreeMapOpenVSplit = 'v'
+    let g:NERDTreeShowLineNumbers = 1
+    let g:NERDTreeWinPos = 'right'
     nnoremap <Leader>nt :NERDTree<CR>
 "}}}
 
@@ -170,3 +169,19 @@ cnoremap kj <C-c>/
 
 " Enable syntax highlighting
 syntax enable
+
+function! IsNerdTreeEnabled()
+    return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+endfunction
+
+function! OpenNerdTree()
+    if !IsNerdTreeEnabled()
+        NERDTree
+        wincmd p
+    endif
+endfunction
+
+au BufRead,BufNewFile *.xaml set filetype=xml
+au BufRead,BufNewFile *.ts set filetype=typescript
+au Syntax css,html,javascript,typescript :call OpenNerdTree()
+
