@@ -108,6 +108,7 @@ set foldcolumn=2
 set hlsearch
 set showmatch
 set mousehide
+set cursorline
 " Preview next two lines when scrolling vertically
 set scrolloff=2
 set smarttab
