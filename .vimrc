@@ -104,6 +104,7 @@ set list
 if has("gui_running")
     colorscheme solarized
     set background=dark
+    set cursorline
 endif
 
 set linebreak
@@ -112,7 +113,6 @@ set foldcolumn=2
 set hlsearch
 set showmatch
 set mousehide
-set cursorline
 " Preview next two lines when scrolling vertically
 set scrolloff=2
 set smarttab
