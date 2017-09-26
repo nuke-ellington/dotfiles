@@ -23,9 +23,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree' "{{{
     let g:NERDTreeMapOpenSplit = 's'
     let g:NERDTreeMapOpenVSplit = 'v'
+    let g:NERDTreeChDirMode = 2
+    let g:NERDTreeMinimalUI = 1
+    let g:NERDTreeShowHidden = 1
     let g:NERDTreeShowLineNumbers = 1
     let g:NERDTreeWinPos = 'right'
-    nnoremap <Leader>nt :NERDTree<CR>
+    nnoremap <Leader>nt :NERDTreeToggle<CR>
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "}}}
 
 " Git related plugins
