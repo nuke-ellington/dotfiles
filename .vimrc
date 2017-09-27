@@ -100,7 +100,7 @@ set number
 set relativenumber
 
 " Highlight tabs and trailing whitespace
-set listchars=tab:>.,trail:.
+set listchars=tab:.\ ,trail:.
 set list
 
 if has("gui_running")
