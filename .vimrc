@@ -73,6 +73,7 @@ Plugin 'altercation/vim-colors-solarized'
 " LustyExplorer <Leader> l[frgb] & LustyJuggler <Leader>lj
 Plugin 'sjbach/lusty'
 
+" Extended matching with %
 Plugin 'vim-scripts/matchit.zip'
 
 call vundle#end()
@@ -175,18 +176,20 @@ cnoremap kj <C-c>/
 " Enable syntax highlighting
 syntax enable
 
-function! IsNerdTreeEnabled()
+function! IsNerdTreeEnabled() "{{{
     return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
-endfunction
+endfunction"}}}
 
-function! OpenNerdTree()
+function! OpenNerdTree() "{{{
     if !IsNerdTreeEnabled()
         NERDTree
         wincmd p
     endif
-endfunction
+endfunction "}}}
 
 au BufRead,BufNewFile *.xaml set filetype=xml
 au BufRead,BufNewFile *.ts set filetype=typescript
 au Syntax css,html,javascript,typescript :call OpenNerdTree()
 
+set modelines=1
+" vim:foldmethod=marker:foldlevel=0
