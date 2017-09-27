@@ -109,6 +109,7 @@ if has("gui_running")
     set cursorline
 endif
 
+set lazyredraw
 set linebreak
 set nowrap
 set foldcolumn=2
