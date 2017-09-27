@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdtree' "{{{
     let g:NERDTreeShowLineNumbers = 1
     let g:NERDTreeWinPos = 'right'
     nnoremap <Leader>nt :NERDTreeToggle<CR>
+    nnoremap <Leader>nf :NERDTreeFind<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "}}}
 
@@ -156,6 +157,9 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap Y y$
+
+" Save current editing session
+nnoremap <Leader>ms :mksession<CR>
 
 " Remove current search highlights
 nnoremap <silent> ö :nohlsearch<CR>
