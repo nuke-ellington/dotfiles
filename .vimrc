@@ -140,6 +140,7 @@ noremap <Leader>< :previous<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
+noremap <Leader>g :grep! -iInR --exclude-dir={.git,node_modules,vendor} 
 
 " Window movement
 nnoremap <Leader>j :wincmd w<CR>
