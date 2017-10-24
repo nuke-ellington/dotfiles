@@ -140,7 +140,8 @@ noremap <Leader>< :previous<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
-noremap <Leader>g :grep! -iInR --exclude-dir={.git,node_modules,vendor} 
+let b:excluded_dirs = '.git,bower_components,node_modules,vendor'
+execute "noremap <Leader>g :grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
 
 " Window movement
 nnoremap <Leader>j :wincmd w<CR>
