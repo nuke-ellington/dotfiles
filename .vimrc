@@ -200,7 +200,9 @@ endfunction "}}}
 
 au BufRead,BufNewFile *.xaml set filetype=xml
 au BufRead,BufNewFile *.ts set filetype=typescript
-au Syntax css,html,javascript,typescript :call OpenNerdTree()
+if has("gui_running")
+    au Syntax css,html,javascript,typescript :call OpenNerdTree()
+endif
 
 set modelines=1
 " vim:foldmethod=marker:foldlevel=0
