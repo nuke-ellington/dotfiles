@@ -7,7 +7,7 @@ let mapleader = "\<Space>"
 " Vundle packet manager
 filetype off
 
-let win_shell = (has('win32') || has('win64')) && &shellcmdflag =~ '/'
+let win_shell = (has("win32") || has("win64")) && &shellcmdflag =~ '/'
 let vimDir = win_shell ? '$USERPROFILE/vimfiles' : '$HOME/.vim'
 let &runtimepath .= ',' . expand(vimDir . '/bundle/Vundle.vim')
 call vundle#rc(expand(vimDir . '/bundle'))
@@ -129,7 +129,7 @@ set hidden
 set clipboard=unnamed
 
 " Use mouse on terminals too
-if has('mouse')
+if has("mouse")
     set mouse=a
 endif
 
@@ -140,8 +140,14 @@ noremap <Leader>< :previous<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
-let b:excluded_dirs = '.git,bower_components,node_modules,vendor'
-execute "noremap <Leader>g :grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
+
+" Grep map
+if has("unix")
+    let b:excluded_dirs = '.git,bower_components,node_modules,vendor'
+    execute "noremap <Leader>g :grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
+elseif
+    noremap <Leader>g :vimgrep 
+endif
 
 " Window movement
 nnoremap <Leader>j :wincmd w<CR>
