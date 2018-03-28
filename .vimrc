@@ -50,7 +50,12 @@ Plugin 'honza/vim-snippets' "{{{
     let g:snipMate.scope_aliases['snippets'] = 'snippets,xml'
 "}}}
 
-Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline' "{{{
+  let g:airline_section_c = '%t'
+"}}}
+Plugin 'vim-airline/vim-airline-themes' "{{{
+    let g:airline_theme = 'badcat'
+"}}}
 Plugin 'bling/vim-bufferline'
 
 " Toggle marks using mx where x is the mark
