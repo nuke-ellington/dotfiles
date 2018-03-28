@@ -74,9 +74,6 @@ Plugin 'othree/javascript-libraries-syntax.vim' "{{{
 
 Plugin 'altercation/vim-colors-solarized'
 
-" LustyExplorer <Leader> l[frgb] & LustyJuggler <Leader>lj
-Plugin 'sjbach/lusty'
-
 " Extended matching with %
 Plugin 'vim-scripts/matchit.zip'
 
