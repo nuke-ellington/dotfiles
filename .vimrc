@@ -146,7 +146,7 @@ noremap <Leader>w :w<CR>
 " Grep map
 if has("unix")
     let b:excluded_dirs = '.git,bower_components,node_modules,vendor'
-    execute "noremap <Leader>g :grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
+    execute "noremap <Leader>g :silent grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
 elseif
     noremap <Leader>g :vimgrep 
 endif
