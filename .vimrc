@@ -77,6 +77,12 @@ Plugin 'altercation/vim-colors-solarized'
 " Extended matching with %
 Plugin 'vim-scripts/matchit.zip'
 
+" Persistent folding
+Plugin 'vim-scripts/restore_view.vim' "{{{
+    set viewoptions=cursor,folds,slash,unix
+    let g:skipview_files = ['*\.vim']
+"}}}
+
 call vundle#end()
 filetype plugin indent on
 
@@ -199,9 +205,6 @@ function! OpenNerdTree() "{{{
         wincmd p
     endif
 endfunction "}}}
-
-au BufWinLeave *.* mkview
-au BufWinEnter *.* silent loadview
 
 au BufRead,BufNewFile *.xaml set filetype=xml
 au BufRead,BufNewFile *.ts set filetype=typescript
