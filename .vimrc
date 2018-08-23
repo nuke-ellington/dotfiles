@@ -83,9 +83,9 @@ Plugin 'vim-scripts/restore_view.vim' "{{{
     let g:skipview_files = ['*\.vim']
 "}}}
 
-Plugin 'valloric/youcompleteme' "{{{
-    let g:ycm_autoclose_preview_window_after_completion = 1
-    let g:ycm_autoclose_preview_window_after_insertion = 1
+"Plugin 'valloric/youcompleteme' "{{{
+"    let g:ycm_autoclose_preview_window_after_completion = 1
+"    let g:ycm_autoclose_preview_window_after_insertion = 1
 "}}}
 
 call vundle#end()
