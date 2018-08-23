@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdtree' "{{{
     let g:NERDTreeMapOpenSplit = 's'
     let g:NERDTreeMapOpenVSplit = 'v'
     let g:NERDTreeChDirMode = 2
+    let g:NERDTreeIgnore = ['\~$', '\.git', '\.vim$', '\.sw[mnpcod]', '\.DS_Store', 'node_modules[[dir]]']
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeShowHidden = 1
     let g:NERDTreeShowLineNumbers = 1
