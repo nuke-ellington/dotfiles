@@ -111,6 +111,8 @@ set incsearch
 set number
 set relativenumber
 
+call matchadd('ColorColumn', '\%81v', 100)
+
 " Highlight tabs and trailing whitespace
 set listchars=tab:.\ ,trail:.
 set list
