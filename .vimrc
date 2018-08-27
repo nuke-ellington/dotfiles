@@ -89,6 +89,11 @@ Plugin 'vim-scripts/restore_view.vim' "{{{
 "    let g:ycm_autoclose_preview_window_after_insertion = 1
 "}}}
 
+" Zen Coding (trigger via <C-y>,)
+Plugin 'mattn/emmet-vim' "{{{
+    "let g:user_emmet_leader_key='<C-y>'
+"}}}
+
 call vundle#end()
 filetype plugin indent on
 
