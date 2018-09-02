@@ -237,8 +237,11 @@ endfunction "}}}
 
 au BufRead,BufNewFile *.xaml set filetype=xml
 au BufRead,BufNewFile *.ts set filetype=typescript
+
 if has("gui_running")
-    au Syntax css,html,javascript,typescript :call OpenNerdTree()
+    let b:code_file_exts = 'css,html,javascript,typescript,java,json'
+
+    execute 'au Syntax ' . b:code_file_exts . ' :call OpenNerdTree()'
 endif
 
 set modelines=1
