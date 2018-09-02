@@ -160,11 +160,29 @@ noremap <Leader>q :q<CR>
 noremap <Leader>Q :wq<CR>
 noremap <Leader>w :w<CR>
 
+function! OpenQuickfixWindow()
+    let l:active_win = winnr()
+
+    for i in range(1, winnr('$'))
+        let bnum = winbufnr(i)
+        if (getbufvar(bnum, '&buftype') == 'quickfix')
+            let l:qf_open = 1
+        endif
+    endfor
+
+    if !exists("l:qf_open")
+        silent execute 'botright copen'
+        silent execute 'wincmd w'
+    endif
+endfunction
+
 " Grep map
 if has("unix")
-    let b:excluded_dirs = '.git,bower_components,node_modules,vendor'
-    execute "noremap <Leader>g :silent grep! -IR --exclude-dir={" . b:excluded_dirs . "} --exclude *.vim "
-elseif
+    let s:excluded_dirs = '.git,bower_components,node_modules,vendor'
+
+    " TODO Find out why invoking this map moves the cursor position
+    execute "noremap <Leader>g :call OpenQuickfixWindow() <bar> :silent grep! -IR --exclude-dir={" . s:excluded_dirs . "} --exclude *.vim "
+else
     noremap <Leader>g :vimgrep 
 endif
 
