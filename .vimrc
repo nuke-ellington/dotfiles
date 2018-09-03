@@ -38,6 +38,26 @@ Plugin 'scrooloose/nerdtree' "{{{
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-syntastic/syntastic' "{{{
+    if !exists('g:syntastic_html_tidy_ignore_errors')
+        let g:syntastic_html_tidy_ignore_errors = []
+    endif
+
+    let g:syntastic_html_tidy_ignore_errors += ["proprietary attribute \"ng-"]
+
+    " check on load and save
+    let g:syntastic_check_on_open = 1
+    " omit checks when quitting
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_javascript_jshint_conf = "$HOME/.jshintrc"
+    let g:syntastic_typescript_checkers = ['tslint']
+    " CSS Lint and stylelint both seem to slow down Vim considerably.
+    "let g:syntastic_css_checkers = ['stylelint']
+
+    nnoremap <Leader>E :Errors<CR>
+"}}}
+
 " Required for SnipMate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
