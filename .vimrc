@@ -114,6 +114,8 @@ Plugin 'mattn/emmet-vim' "{{{
     "let g:user_emmet_leader_key='<C-y>'
 "}}}
 
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()
 filetype plugin indent on
 
