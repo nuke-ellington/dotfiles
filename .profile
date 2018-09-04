@@ -14,7 +14,6 @@ declare HISTCONTROL=ignoreboth:erasedups
 set -o vi
 
 # Alias constructs
-alias ..=cd ..
 alias ls=ls\ -AF # list all entries except for . and ..
 alias ll=ls\ -Gl # list all entries in long format
 alias g=git
