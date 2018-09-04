@@ -35,7 +35,9 @@ Plugin 'scrooloose/nerdtree' "{{{
 "}}}
 
 " Git related plugins
-Plugin 'airblade/vim-gitgutter'
+if v:version < 703
+    Plugin 'airblade/vim-gitgutter'
+endif
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'leafgarland/typescript-vim'
