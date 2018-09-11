@@ -1,0 +1,7 @@
+[alias]
+    d = diff
+    dc = diff --cached
+    st = status
+    ci = commit
+    co = checkout
+    aka = config --get-regexp alias
