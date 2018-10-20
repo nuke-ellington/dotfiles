@@ -28,7 +28,7 @@ Plugin 'scrooloose/nerdtree' "{{{
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeShowHidden = 1
     let g:NERDTreeShowLineNumbers = 1
-    let g:NERDTreeWinPos = 'right'
+    let g:NERDTreeWinPos = 'left'
     nnoremap <Leader>nt :NERDTreeToggle<CR>
     nnoremap <Leader>nf :NERDTreeFind<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
