@@ -38,7 +38,7 @@ Plugin 'scrooloose/nerdtree' "{{{
 if v:version > 703
     Plugin 'airblade/vim-gitgutter'
 endif
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'leafgarland/typescript-vim'
