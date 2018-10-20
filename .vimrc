@@ -119,6 +119,12 @@ Plugin 'mattn/emmet-vim' "{{{
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'ryanoasis/vim-devicons' "{{{
+    let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+    let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+"}}}
+Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -149,6 +155,7 @@ if has("gui_running")
     colorscheme solarized
     set background=dark
     set cursorline
+    set guifont=Hack\ Nerd\ Font:h11
 endif
 
 set lazyredraw
