@@ -7,9 +7,13 @@ GREEN="\[$(tput setaf 2)\]"
 GOLD="\[$(tput setaf 3)\]"
 RESET="\[$(tput sgr0)\]"
 get_branch_name() {
-    git branch 2> /dev/null | grep '^*' | colrm 1 2
+    branch=$(git branch 2> /dev/null | grep '^*' | colrm 1 2)
+    if [ "$branch" ]
+    then
+	echo "[$branch]"
+    fi
 }
-export PS1="${GOLD}\A${RESET} ${GREEN}\W${RESET} ${GOLD}($(get_branch_name))${RESET} > "
+export PS1="${GOLD}\A${RESET} ${GREEN}\W${RESET} ${GOLD}\$(get_branch_name)${RESET} > "
 
 declare HISTCONTROL=ignoreboth:erasedups
 
