@@ -13,7 +13,7 @@ get_branch_name() {
 	echo "[$branch]"
     fi
 }
-export PS1="${GOLD}\A${RESET} ${GREEN}\W${RESET} ${GOLD}\$(get_branch_name)${RESET} > "
+export PS1="${GOLD}\A${RESET} ${GREEN}\w${RESET} ${GOLD}\$(get_branch_name)${RESET}> "
 
 declare HISTCONTROL=ignoreboth:erasedups
 

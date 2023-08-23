@@ -78,7 +78,7 @@ Plugin 'vim-airline/vim-airline' "{{{
   let g:airline_section_c = '%t'
 "}}}
 Plugin 'vim-airline/vim-airline-themes' "{{{
-    let g:airline_theme = 'badcat'
+    let g:airline_theme = 'badwolf'
 "}}}
 Plugin 'bling/vim-bufferline'
 
@@ -271,7 +271,7 @@ au BufRead,BufNewFile *.xaml set filetype=xml
 au BufRead,BufNewFile *.ts set filetype=typescript
 
 if has("gui_running")
-    let b:code_file_exts = 'css,html,javascript,typescript,java,json,groovy'
+    let b:code_file_exts = 'css,html,javascript,typescript,java,json'
 
     execute 'au Syntax ' . b:code_file_exts . ' :call OpenNerdTree()'
 endif
