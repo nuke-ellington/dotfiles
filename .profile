@@ -27,3 +27,5 @@ alias g=git
 alias d=docker
 alias lsnm="npm ls --depth=0" # list top level node modules
 alias finder=open\ -a\ finder\ .
+alias cz="npx cz"
+alias pn=pnpm
