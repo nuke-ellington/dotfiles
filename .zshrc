@@ -1,4 +1,4 @@
-source .profile
+source ~/.profile
 
 function get_branch_name() {
     branch=$(git branch 2> /dev/null | grep '^*' | colrm 1 2)
